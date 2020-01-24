@@ -1,3 +1,124 @@
+/* BASIC SETINGS */
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey:#999;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: pink;
+  font-family: 'Open-Sans', Helvetica, sans-serif;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  
+}
+
+.list_item span {
+  padding-left: 0.5rem;
+}
+
+.button {
+  padding: 0.5rem;
+}
+
+.button_white {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Header */
+.header {
+  background: var(--black);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  height: 50px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.header a{
+  height: 100%;
+}
+
+.header_logo {
+  width: 50px;
+  height: 100%;
+  margin-right: 0.7rem;
+}
+
+.main-nav_list {
+  display: none;
+}
+
+.buttons-right {
+  display: flex;
+  align-items: center;
+}
+
+.header_mobile-icon {
+  padding: 0 8px;
+}
+
+.header .language, 
+.header .log-in_icon {
+  display: none;
+}
+
+@media screen and (min-width: 600px/*1120px*/) {
+  .header {
+    height: 70px;
+    padding: 0 64px;
+  }
+
+  
+  .main-nav_list {
+    display: flex;
+  }
+  
+  .header .language, 
+  .header .log-in_icon {
+    display: inline-block;
+  }
+
+  .header_mobile-icon {
+    display: none;
+  }
+} 
+
+/* Section Hero */
+.services {
+  display: flex;
+}
+
+.service {
+  /* padding: 20; */
+  /* background: red; */
+}
+
+.service a {
+  display: grid;
+  align-items: center;
 }
