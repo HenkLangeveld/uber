@@ -3,6 +3,7 @@
   --black: #000;
   --white: #fff;
   --grey:#999;
+  --light-grey: #eee;
 }
 
 html {
@@ -24,7 +25,6 @@ body {
 a {
   color: currentColor;
   text-decoration: none;
-  margin: 0 0.5rem;
 }
 
 ul {
@@ -32,20 +32,28 @@ ul {
 }
 
 li {
-  
+  margin: 0 0.5rem;
 }
 
 .list_item span {
   padding-left: 0.5rem;
 }
 
-.button {
-  padding: 0.5rem;
-}
-
 .button_white {
   background: var(--white);
   color: var(--black);
+  padding: 0.5rem;
+}
+
+.button_black {
+  background: var(--black);
+  color: var(--white);
+  padding: 14px 25px;
+}
+
+.button_underline {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--light-grey);
 }
 
 /* Header */
@@ -109,11 +117,26 @@ li {
 } 
 
 /* Section Hero */
+.hero {
+  max-width: 1280px;
+  margin: auto;
+}
 .services {
+  background: var(--white);
   display: flex;
+  justify-content: space-between;
+}
+
+.services li{
+  padding: 28px 12px 20px 12px;
+}
+
+.services .current {
+  border-bottom: 3px solid var(--black);
 }
 
 .service {
+  text-align: center;
   /* padding: 20; */
   /* background: red; */
 }
@@ -122,3 +145,116 @@ li {
   display: grid;
   align-items: center;
 }
+
+.service span {
+  width: 81px;
+  height: 48px;
+  margin-top: 0.5rem;
+  display: grid;
+  align-content: center;
+}
+
+.hero_text {
+  background: var(--white);
+  border-top: 1px solid var(--light-grey);
+  padding: 56px 48px 48px 48px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  justify-items: start;
+  align-items: start;
+  
+}
+
+.hero_text_header {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.hero_text_info {
+  margin-bottom: 30px;
+}
+
+.hero_text_button {
+  margin-bottom: 20px;
+}
+
+.hero_image {
+  width: 100vw;
+}
+
+@media screen and (min-width: 1120px) {
+  .hero {
+    background: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_north,w_1280,h_853/v1578357180/assets/69/908bc0-7167-40d0-b046-af52170801f5/original/Product-Masthead-Desktop_2.jpg")no-repeat center center/cover;
+    /* background: green; */
+    display: grid;
+    grid-template-columns: 1fr 492px 540px 1fr;
+
+  }
+
+  .service-nav {
+    /* max-width: 1032px;
+    margin: auto; */
+    padding-top: 60px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .hero_text {
+    grid-column-start: 2;
+    margin-bottom: 120px;
+  }
+
+  .hero_image {
+    display: none;
+  }
+}
+
+/* Cities */
+.cities {
+  max-width: 1280px;
+  margin: auto;
+  padding: 30px 0;
+  position: relative;
+}
+
+.cities_header {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+
+.cities_button {
+  font-size: 0.9rem;
+}
+
+.cities_header,
+.cities_button {
+  margin: 0 30px;
+}
+
+.cities_image {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .cities {
+    height: 470px;
+    background: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_2040/v1556927537/assets/e4/ade93c-0b7b-4990-bda4-afef96793277/original/Modalities_banner_home.jpg") no-repeat center center/cover;
+  }
+  .cities_header {
+    width: 360px;
+    font-size: 3.25rem;
+  }
+
+  .cities_header,
+  .cities_button {
+    margin: 0 75px;
+  } 
+  .cities_image {
+    display: none;
+  }
+}
+
