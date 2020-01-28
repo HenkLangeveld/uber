@@ -304,3 +304,28 @@ li {
     max-width: 50%;
   }
 }
+
+/* section info  */
+.info {
+  max-width: 1280px;
+  margin: auto;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 20px;
+}
+
+.info_icon {
+  margin-bottom: 1.2rem;
+}
+
+.info_header {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.info_text {
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
