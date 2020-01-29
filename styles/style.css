@@ -372,3 +372,164 @@ li {
     float: right;
   }
 }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer {
+  padding: 60px 24px 35px 24px;
+  max-width: 1060px;
+  margin: auto;
+  font-size: 0.8rem;
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.footer > * {
+  margin: 15px 0;
+  line-height: 2;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+
+.footer li {
+  margin: 0;
+}
+
+.footer_logo {
+  width: 65px;
+}
+
+.footer_info_item i {
+  font-size: 1rem;
+}
+
+.footer_info_item span {
+  margin-left: 1rem;
+}
+
+.footer-list li:first-child {
+  font-size: 1rem;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+.footer_info_image {
+  margin-right: 15px;
+}
+
+.social {
+  font-size: 1.3rem;
+}
+
+.social a {
+  margin-right: 1.5rem;
+}
+
+.footer_info_item a span:hover,
+.footer_list_item a:hover,
+.legal a:hover {
+  border-bottom: 1px solid var(--white);
+} 
+
+@media screen and (min-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "logo info info"
+      "stores footer-list_1 footer-list_2"
+      "social footer-list_1 footer-list_2"
+      "divider divider divider"
+      "footer_copyright legal legal";
+    padding-bottom: 0;
+  }
+
+  .footer_logo {grid-area: logo;}
+  .footer_info_items {grid-area: info;}
+  .footer-list_1 {grid-area: footer-list_1;}
+  .footer-list_2 {grid-area: footer-list_2;}
+  .stores {grid-area: stores;}
+  .social {grid-area: social;}
+  .footer-divider {grid-area: divider;}
+  .legal {grid-area: legal;}
+  .footer_copyright {grid-area: footer_copyright;}
+
+  .footer > * {
+    margin: 40px 0;
+    line-height: 3;
+  }
+
+  .footer_info_image {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .social {
+    font-size: 1rem;
+    align-self: end;
+  }
+
+  .footer-divider {
+    margin-bottom: 0;
+  }
+
+  .legal {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .legal li {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr) auto;
+    grid-template-areas: 
+      "logo . footer-list_1 footer-list_2"
+      "info . footer-list_1 footer-list_2"
+      "stores stores footer-list_1 footer-list_2"
+      "divider divider divider divider"
+      "footer_copyright legal legal social";
+    padding-bottom: 40px;
+  }
+
+  .footer > * {
+    /* border: 1px solid red; */
+    margin: 5px 0;
+    line-height: 2.5;
+  }
+
+  .footer_info_image {
+    display: inline;
+    margin-right: 30px;
+  }
+
+  .footer-divider {
+    margin: 50px 0;
+  }
+
+  .legal {
+    justify-content: center;
+  }
+
+  .legal li {
+    margin: 0 10px;
+  }
+
+  .social a {
+    margin-right: 0;
+    margin-left: 1.5rem;
+  }
+
+  .social {
+    justify-self: right;
+  }
+}
